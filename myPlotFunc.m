@@ -67,8 +67,12 @@ function [ iFig, descriptionStr, figureStr] = myPlotFuncSupp( iFig, ...
     xlim(xLimits);
     yLimits =  figure_lim_supp( yLimits);
     ylim(yLimits);
-    saveas( f, fileName, 'pdf')
-    saveas( f, fileName, 'eps')
+    saveas( f, fileName, 'pdf');
+    saveas( f, fileName, 'jpg');
+    saveas( f, fileName, 'm');
+    saveas( f, fileName, 'eps');
+
+    
     [descriptionStr, figureStr] = prepareFigureStr( yStr, ...
         [], fileName, folderPrefixStr);
 end
@@ -122,8 +126,10 @@ function [ iFig, descriptionStr, figureStr] = myFill( iFig, xDoubleVec, ...
             set(lngd, 'Position', [0.8,0.25,0.05,0.6]);
             xlabel(xStr, 'Interpreter', 'Latex');
             ylabel(yStr, 'Interpreter', 'Latex');
-            saveas( f, fileName, 'pdf')
-            saveas( f, fileName, 'epsc')
+            saveas( f, fileName, 'pdf');
+            saveas( f, fileName, 'jpg');
+            saveas( f, fileName, 'm');
+            saveas( f, fileName, 'eps');
             [descriptionSuppStr, figureSuppStr] = prepareFigureStr( yStr, ...
                 indPlotVec( indGood)', fileName, folderPrefixStr);
             descriptionStr = [ descriptionStr, descriptionSuppStr];
@@ -180,8 +186,10 @@ function [ iFig, descriptionStr, figureStr] = myCumsumFill( iFig, ...
     set(lngd, 'Position', [0.8,0.25,0.05,0.6]);
     xlabel(xStr, 'Interpreter', 'Latex');
     ylabel(yStr, 'Interpreter', 'Latex'); 
-    saveas( f, fileName, 'pdf')
-    saveas( f, fileName, 'epsc')
+    saveas( f, fileName, 'pdf');
+    saveas( f, fileName, 'jpg');
+    saveas( f, fileName, 'm');
+    saveas( f, fileName, 'eps');
     [descriptionStr, figureStr] = prepareFigureStr( yStr, ...
         indGood, fileName, folderPrefixStr);
 end

@@ -23,6 +23,8 @@ function [descriptionsStr, figuresStr] = myMovieFunc( QDoubleArray, ...
         if j == 1
             figStr = [fileStr, 'S'];
             saveas( f, figStr, 'pdf');
+            saveas( f, figStr, 'jpg');
+            saveas( f, figStr, 'm');
             saveas( f, figStr, 'eps');
             [descriptionsStr, figuresStr] = prepareFigureStr( 'qS', ...
                 [], figStr, folderPrefixStr);
@@ -30,6 +32,8 @@ function [descriptionsStr, figuresStr] = myMovieFunc( QDoubleArray, ...
     end
     figStr = [fileStr, 'F'];
     saveas( f, figStr, 'pdf');
+    saveas( f, figStr, 'jpg');
+    saveas( f, figStr, 'm');
     saveas( f, figStr, 'eps');
     [descriptionStr, figureStr] = prepareFigureStr( 'qF', ...
         [], figStr, folderPrefixStr);
